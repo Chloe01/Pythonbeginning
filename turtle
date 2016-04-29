@@ -1,0 +1,34 @@
+import turtle
+
+def draw_square(some_turtle) :
+    for i in range (1,5):
+        some_turtle.forward(100)
+        some_turtle.right(90)
+def draw_circle(some_turtle) :
+        some_turtle.circle(120)
+
+def draw_art():
+    window = turtle.Screen()
+    window.bgcolor ("green")
+    #Create the turtle a - Draws a circle from squares
+    a = turtle.Turtle()
+    a.shape("arrow")
+    a.color("red")
+    a.speed(11)
+    for i in range (1,41):
+        draw_square(a)
+        a.right(10)
+    #change colors
+    window.bgcolor ("pink")
+    #Create the turtle b - Draws a circle from squares
+    b = turtle.Turtle()
+    b.shape("arrow")
+    b.color("blue")
+    b.speed(5)
+    for i in range (1,13):
+        draw_circle(b)
+        b.right(30)
+
+    window.exitonclick()
+
+draw_art()
